@@ -15,6 +15,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* ========== Navigation Bar ========== */
@@ -38,6 +39,7 @@ a {
     font-weight: bold;
 }
 
+/* Default nav for large screens */
 nav {
     display: flex;
     gap: 20px;
@@ -46,7 +48,7 @@ nav {
 nav a {
     color: white;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -181,14 +183,14 @@ form iframe {
     margin-bottom: 10px;
 }
 
-/* ========== Responsive Typography ========== */
-@media (max-width: 480px) {
+/* ========== Responsive Typography & Layout ========== */
+@media (max-width: 768px) {
     h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .service-header h3 {
@@ -197,10 +199,32 @@ form iframe {
 
     .service-header button {
         font-size: 14px;
-        padding: 8px;
+        padding: 8px 12px;
     }
 
     .logo {
         font-size: 20px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 18px;
     }
 }
