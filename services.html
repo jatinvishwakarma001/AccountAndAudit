@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Account & Audit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <div class="service-header">
+                <h3>Accounting</h3>
+                <button onclick="toggleDescription('desc1')">About Service</button>
+            </div>
+            <p id="desc1" class="service-description">We provide comprehensive bookkeeping, ledger management, and financial reporting to help your business maintain accurate financial records.</p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <h3>Auditing</h3>
+                <button onclick="toggleDescription('desc2')">About Service</button>
+            </div>
+            <p id="desc2" class="service-description">Our auditing services ensure compliance with statutory regulations and help assess the financial health of your business through detailed examination of accounts.</p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <h3>Tax Consultation</h3>
+                <button onclick="toggleDescription('desc3')">About Service</button>
+            </div>
+            <p id="desc3" class="service-description">We assist in tax planning, filing, and advisory to minimize liabilities and maximize benefits, aligned with the latest legal frameworks.</p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <h3>Financial Advisory</h3>
+                <button onclick="toggleDescription('desc4')">About Service</button>
+            </div>
+            <p id="desc4" class="service-description">Get strategic guidance on investments, budgeting, and long-term financial planning tailored to your goals and market trends.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
