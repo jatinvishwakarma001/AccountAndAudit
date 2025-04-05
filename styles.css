@@ -1,64 +1,118 @@
-/* Base Reset & Typography */
-body {
+/* ========== Reset & Base ========== */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f9;
     color: #333;
     line-height: 1.6;
+    padding-top: 70px; /* To avoid content behind nav */
 }
 
-/* Header & Nav */
-header {
-    background-color: #004080;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 5px 15px;
-}
-
-nav ul li a {
+a {
     text-decoration: none;
+}
+
+/* ========== Navigation Bar ========== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #002b5c;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
     font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ffcc00;
+nav a:hover {
+    color: #ffc107;
 }
 
-/* Section Styling */
+/* Hamburger for Mobile */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mobile Nav Menu */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #002b5c;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #1f3c88;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ========== Sections ========== */
 section {
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
-h2 {
+h1, h2 {
     color: #004080;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Service Items */
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* ========== Services Section ========== */
 .service-item {
     background: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     margin: 15px auto;
-    max-width: 700px;
+    max-width: 800px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -74,7 +128,6 @@ h2 {
 }
 
 .service-header h3 {
-    margin: 0;
     font-size: 20px;
 }
 
@@ -93,12 +146,13 @@ h2 {
 }
 
 .service-description {
-    margin-top: 10px;
+    margin-top: 15px;
     display: none;
     font-size: 16px;
+    line-height: 1.5;
 }
 
-/* Pricing Page Button */
+/* ========== Pricing Page ========== */
 #pricing button {
     background-color: #004080;
     color: white;
@@ -114,35 +168,20 @@ h2 {
     background-color: #0059b3;
 }
 
-/* Responsive Iframe for Google Forms */
 form iframe {
     width: 100%;
     max-width: 100%;
     border: none;
+    height: 520px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .service-header button {
-        width: 100%;
-    }
-
-    header, section {
-        padding: 15px;
-    }
+/* ========== Contact Page ========== */
+#contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
+/* ========== Responsive Typography ========== */
 @media (max-width: 480px) {
     h1 {
         font-size: 24px;
@@ -159,5 +198,9 @@ form iframe {
     .service-header button {
         font-size: 14px;
         padding: 8px;
+    }
+
+    .logo {
+        font-size: 20px;
     }
 }
