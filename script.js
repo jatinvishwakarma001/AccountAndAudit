@@ -6,3 +6,7 @@ function toggleDescription(id) {
     const desc = document.getElementById(id);
     desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
 }
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+}
