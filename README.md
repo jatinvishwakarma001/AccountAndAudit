@@ -4,7 +4,7 @@ A clean, responsive, and user-friendly website for an Accounting & Auditing firm
 
 ## 🌐 Live Preview
 
-[(Insert link here if hosted, e.g., GitHub Pages or Netlify)](https://jatinvishwakarma001.github.io/AccountAndAudit/index.html)
+[AccountAndAudit](https://jatinvishwakarma001.github.io/AccountAndAudit/index.html)
 
 ---
 
